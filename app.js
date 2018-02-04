@@ -3,7 +3,7 @@ var app = express();
 
 var http = require("http"); // for fetching txt file
 
-var port = process.env.PORT || config.PORT; // HEROKU requirement
+var port = process.env.PORT || 3000; // HEROKU requirement
 
 // split words by space
 function splitByWords (text) {

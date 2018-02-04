@@ -72,6 +72,11 @@ app.get('/:count', function (req, res) {
 
 });
 
+
+app.get('/', (req, res) => { res.send('Pass the parameter'); }); 
+
+app.get('/*', (req, res) => { res.send('/Pass number parameter'); }); 
+
 app.listen(port, function () {
   console.log('Server running on'+ port);
 });

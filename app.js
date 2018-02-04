@@ -48,8 +48,10 @@ app.get('/:count', function (req, res) {
 
     let count = req.params.count;
 
-    if(typeof count != 'number'){
+    console.log(typeof count);
+    if(isNaN(count)){
       res.send("Pass a number");
+      return;
     }
 
     http.get('http://terriblytinytales.com/test.txt').on('response', function (response) {
@@ -84,5 +86,5 @@ app.get('/:count', function (req, res) {
 app.get('/', (req, res) => { res.send('Pass the count parameter'); }); 
 
 app.listen(port, function () {
-  console.log('Server running on'+ port);
+  console.log('Server running on '+ port);
 });

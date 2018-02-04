@@ -3,6 +3,10 @@ var app = express();
 
 var http = require("http"); // for fetching txt file
 
+var cors = require('cors')
+
+app.use(cors())
+
 var port = process.env.PORT || 3000; // HEROKU requirement
 
 // split words by space
